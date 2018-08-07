@@ -131,7 +131,12 @@ li {
    height: 100%;
    width: 100% ;
    text-align: center;
-   border-radius: 0%;
+   /*bordes*/
+border-top-left-radius: 20px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 20px;
+
 }
 
 
@@ -160,6 +165,11 @@ li {
     
     transition: all 2s ease ;
     opacity: 1;
+/*bordes*/
+border-top-left-radius: 20px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 20px;
 }
 
 
@@ -177,20 +187,17 @@ li {
     width: 900px;
     text-align: left;
     background: #302c26fb;
-    
+    border-radius: 2%;
 }
 
 .opciones {
-    
-    /*
     display: block;
-    
     width: 50%;
     height: 100%;
     position: relative;
     float:left;
     width: 50%;
-    height: 100%;*/
+    height: 100%;
 }
 
 .contenidoOpciones {
@@ -229,12 +236,23 @@ li {
 }
 
 .textoOpcion {
-    position: fixed;
     overflow: visible;
-    transform: rotate(90deg);
-    text-indent: 10px;
+    /*transform: rotate(90deg);*/
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-indent : 0px;
+    writing-mode: vertical-lr;
+}
+
+.botonOpcion {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
 }
 
 .active, .texto:hover {
@@ -266,9 +284,6 @@ li {
     display: inherit;
     overflow: auto;
     transition: all 2s ease-in-out;
-}
-
-.contenidoPanel {
 }
 
 .d-inline-block {

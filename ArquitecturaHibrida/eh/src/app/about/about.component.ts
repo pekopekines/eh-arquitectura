@@ -50,7 +50,7 @@ export class AboutComponent implements OnInit {
   urls:Array<string>;
   descripciones:Array<string>;
   urlImagen:string;
-  imagenCss="imagen ";
+  imagenCss="imagen";
   panelMacuEfect: string;
   panelPaulaEfect: string;
   panelEstudioEfect: string;

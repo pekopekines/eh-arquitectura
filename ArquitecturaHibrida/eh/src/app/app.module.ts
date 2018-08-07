@@ -15,9 +15,7 @@ import {Routes, RouterModule} from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -35,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     routes,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFontAwesomeModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

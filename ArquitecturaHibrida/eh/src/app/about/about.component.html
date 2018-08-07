@@ -13,22 +13,22 @@
         </div>
         <div class="opciones" (mouseenter)="hoverOpcion()" (mouseleave)="hoverOutOpcion()">
             <div class="contenidoOpciones">
-                    <div [@slideInOut]="panelMacuEfect">
-                            <p>Hola soy Paula.</p>
-                    </div>
-                    <div id="paula" class="opcion" (click)="selectOpction($event)"  >
-                        <button class="botonOpcion"></button>
-                        <p class="textoOpcion"> Paula .....</p>
-                    </div>
+                <div [@slideInOut]="panelPaulaEfect">
+                        <p>Hola soy Paula.</p>
+                </div>
+                <div id="paula" class="opcion" (click)="selectOpction($event)" >
+                    <button class="botonOpcion"><i class="fa fa-angle-down"></i></button>
+                    <label class="textoOpcion"> Paula .....</label>
+                </div>
             </div>
 
             <div class="contenidoOpciones">
-                    <div [@slideInOut]="panelPaulaEfect">
+                    <div [@slideInOut]="panelMacuEfect">
                             <p>Hola soy Macu.</p>
                     </div>
                     <div id="macu" class="opcion" (click)="selectOpction($event)">
-                        <button class="botonOpcion"></button>
-                        <p class="textoOpcion"> Macarena Gimenez</p>
+                        <button class="botonOpcion"><i class="fa fa-angle-down"></i></button>
+                        <label class="textoOpcion"> Macarena Gimenez</label>
                     </div>
             </div>
 
@@ -37,7 +37,8 @@
                             <p>Hola soy un Estudio eh....</p>
                     </div>
                     <div id="estudio" class="opcion" (click)="selectOpction($event)">
-                           <p class="textoOpcion"> Estudio .....</p>
+                        <button class="botonOpcion"><i class="fa fa-angle-down"></i></button>
+                        <label class="textoOpcion"> Estudio .....</label>
                     </div>
             </div>
             <!--
