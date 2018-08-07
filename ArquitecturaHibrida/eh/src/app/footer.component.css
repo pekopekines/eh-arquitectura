@@ -1,0 +1,31 @@
+.foot {
+    /*width: 100%;
+    position: fixed;
+    border-radius: 25;
+    border-color: rgb(255, 255, 255);
+    height: 10%;
+    background: rgb(15, 15, 15);
+    float:  left;
+    text-align: center;
+    margin: 0 auto -80px;
+    vertical-align: bottom */
+    width:100%;
+    height:10%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    color: #333;
+    background: rgb(15, 15, 15);
+    text-align: center;
+
+}
+
+a {
+    color:  white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.icons {
+    margin-top: 1%;
+}

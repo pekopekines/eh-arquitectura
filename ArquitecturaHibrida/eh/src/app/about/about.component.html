@@ -1,0 +1,55 @@
+<div class= "xbody">
+<!--
+<div class="perfil">
+    <div  [class]="workerI" (click)="selectWorker($event)"><img id="wi" class="imgWorker" src="../../assets/images/Macu.jpg" ></div>
+    <div  [class]="workerD" (click)="selectWorker($event)"><img id="wd"class="imgWorker" src="../../assets/images/Paula.jpg" ></div>
+    <div style="margin-left: 30%"><div [class]="descripcion"><p [class]="tipoDescripcion">{{texto}}</p></div></div>  
+</div> 
+-->
+
+    <div class= "perfil2">
+        <div [class]="imagenCss">
+            <img img class="imgWorker" src="{{urlImagen}}" >
+        </div>
+        <div class="opciones" (mouseenter)="hoverOpcion()" (mouseleave)="hoverOutOpcion()">
+            <div class="contenidoOpciones">
+                    <div [@slideInOut]="panelMacuEfect">
+                            <p>Hola soy Paula.</p>
+                    </div>
+                    <div id="paula" class="opcion" (click)="selectOpction($event)"  >
+                        <button class="botonOpcion"></button>
+                        <p class="textoOpcion"> Paula .....</p>
+                    </div>
+            </div>
+
+            <div class="contenidoOpciones">
+                    <div [@slideInOut]="panelPaulaEfect">
+                            <p>Hola soy Macu.</p>
+                    </div>
+                    <div id="macu" class="opcion" (click)="selectOpction($event)">
+                        <button class="botonOpcion"></button>
+                        <p class="textoOpcion"> Macarena Gimenez</p>
+                    </div>
+            </div>
+
+            <div class="contenidoOpciones">
+                    <div [@slideInOut]="panelEstudioEfect">
+                            <p>Hola soy un Estudio eh....</p>
+                    </div>
+                    <div id="estudio" class="opcion" (click)="selectOpction($event)">
+                           <p class="textoOpcion"> Estudio .....</p>
+                    </div>
+            </div>
+            <!--
+            <div id="macu" class="texto" (click)="selectOpction($event)">
+                Macarena Gimenez
+                <p [class]="macuPanel">Hola soy Macu.</p>
+            </div>
+            <div id="estudio" class="texto" (click)="selectOpction($event)">
+                Arquitectura Hibrida
+                <p [class]="estudioPanel" >Somos un estudio enfocado en...</p>
+            </div>-->
+        </div>
+    </div>
+    
+</div>

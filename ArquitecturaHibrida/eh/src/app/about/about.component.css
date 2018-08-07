@@ -1,0 +1,277 @@
+.xbody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: black;
+    background-color: rgba(43, 71, 71, 0.979);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 1;
+    z-index: 0;
+    
+}
+
+.perfil {
+    margin-top: 5%;
+    margin-left: 28%;
+    position: absolute;
+    border-radius: 10%;
+    height: 650px;
+    width: 800px;
+    line-height: 120px;
+    text-align: center;
+    background: #302c26fb;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.workerI {
+    position: absolute;
+    float: left;
+    margin-left: 25%;
+    margin-top: 15%;
+}
+.workerD {
+    position: absolute;
+    float: right;
+    margin-left: 50%;
+    margin-top: 15%;
+   
+}
+
+.worker {
+    background: #835500fb;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 140px;
+    width: 140px;
+   
+    text-align: center;
+}
+
+.worker:hover {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s ease;
+}
+li {
+    list-style:none; /*escondemos puntos de li */
+}
+
+.oculto {
+    opacity: 0;
+    transition: ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in 0.2s;
+}
+
+.selected {
+   /* float: left;*/
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 4%;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 140px;
+    width: 140px;
+    line-height: 120px;
+    text-align: center;
+    transform: translate();
+    transition: all 2s ease;
+}
+
+.unSelected {
+   /* float: left;*/
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 6%;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 110px;
+    width: 110px;
+    line-height: 120px;
+    text-align: center;
+    transform: translate();
+    transition: all 2s ease;
+}
+
+.estudioDesc {
+    position: absolute;
+    margin-top: 35%;
+    text-align: left;
+    width: 70%;
+}
+
+.workerDesc {
+    position: absolute;
+    margin-top: 5%;
+    text-align: left;
+    width: 70%;
+}
+
+.imgWorker {
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+   border-radius: 0%;
+}
+
+
+@media screen and (max-width: 800px){
+    .perfil {
+        margin-left: 45%;
+        width: 400px;
+    }
+    .workerI {
+        margin-left: 10%;
+    }
+    .workerD {
+        margin-left: 50%;
+    }
+}
+
+/*-----------------------------------*/
+
+.imagen {
+    float:left;
+    background: #835500fb;
+    border-radius: 0%;
+    cursor: pointer;
+    height: 100%;
+    width: 50%;
+    
+    transition: all 2s ease ;
+    opacity: 1;
+}
+
+
+
+.imagenHover{
+    opacity: 0.7;
+}
+
+.perfil2 {
+    position: relative;
+    float:left;
+    margin-top: 5%;
+    margin-left: 30%;
+    height: 450px;
+    width: 900px;
+    text-align: left;
+    background: #302c26fb;
+    
+}
+
+.opciones {
+    
+    /*
+    display: block;
+    
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float:left;
+    width: 50%;
+    height: 100%;*/
+}
+
+.contenidoOpciones {
+    float:left; overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+}
+
+.opcion {
+    float:left; overflow: hidden;
+    cursor: pointer;
+    transform-origin: 15px 15px;
+    height: 450px;
+    width: 40px;
+    /*left: 0;
+    transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+    transform: rotate(90deg);
+    transform-origin: 20px 20px;
+    line-height: 40px;
+    text-indent: 60px;
+    z-index: 2;
+    font-size: 22px;
+    font-weight: 300;
+    color: inherit;
+    cursor: pointer;
+    line-height: 50px;
+    float:left;
+    background-color: moccasin;
+    padding: 10px;
+    height: 40px;
+    text-indent: 10px;*/
+    background: radial-gradient(rgb(45, 45, 53),rgb(94, 60, 1));
+    padding: 10px;
+}
+
+.textoOpcion {
+    position: fixed;
+    overflow: visible;
+    transform: rotate(90deg);
+    text-indent: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-indent : 0px;
+}
+
+.active, .texto:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    /*transform: rotate(-90deg);
+    display: block;
+    */
+    position: relative;
+    width: 320px;
+    float:left;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+.panelSeleccionado {
+    position: relative;
+    left:0;
+    width: 330px;
+    height: 450px;
+    border-radius: 5%;
+    float:left;
+    background-color: white;
+    overflow: hidden;
+    display: inherit;
+    overflow: auto;
+    transition: all 2s ease-in-out;
+}
+
+.contenidoPanel {
+}
+
+.d-inline-block {
+    width: 300px;
+    height: 300px;
+}
