@@ -21,7 +21,8 @@ declare var $:any;
         height: '450px',
         float:'left',
         display: 'none',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
+        opacity: 0,
         overflow: 'hidden'
       })),
       state('in', style({
@@ -30,12 +31,13 @@ declare var $:any;
         width: '330px',
         height: '450px',
         float:'left',
-        backgroundColor: 'white',
+        backgroundColor: 'transparent',
         display: 'inherit',
+        opacity: 1,
         overflow: 'auto'
       })),
-      transition('in => out', animate('0ms ease-in-out')),
-      transition('out => in', animate('400ms ease-in-out'))
+      transition('in => out', animate('500ms ease-in-out')),
+      transition('out => in', animate('500ms ease-in-out'))
     ])
   ]
 })
@@ -54,7 +56,9 @@ export class AboutComponent implements OnInit {
   panelMacuEfect: string;
   panelPaulaEfect: string;
   panelEstudioEfect: string;
-
+  estudioIconArrow: String;
+  macuIconArrow: String;
+  paulaIconArrow: String;
   ngOnInit() {
     this.urls = ["../../assets/images/Macu.jpg", "../../assets/images/Paula.jpg"];
     this.descripciones = ["Somos un estudio enfocado...", "Soy Macu", "Soy Paula"];
@@ -62,6 +66,9 @@ export class AboutComponent implements OnInit {
     this.panelMacuEfect = 'out';
     this.panelPaulaEfect = 'out';
     this.panelEstudioEfect = 'in';
+    this.estudioIconArrow = 'fa fa-angle-left';
+    this.macuIconArrow = 'fa fa-angle-right';
+    this.paulaIconArrow = 'fa fa-angle-right';
   }
 
   selectWorker(event) {
@@ -81,11 +88,11 @@ export class AboutComponent implements OnInit {
     }
   }
   selectOpction(event) {
-    if(event.target.id=="macu"){
+    if(event=="macu"){
       this.urlImagen = "../../assets/images/Macu.jpg";
-    } if (event.target.id=="paula")  {
+    } if (event=="paula")  {
       this.urlImagen = "../../assets/images/Paula.jpg";
-    } else if (event.target.id=="estudio"){
+    } else if (event=="estudio"){
       this.urlImagen = "../../assets/images/casa1.jpg";
     }
     this.toggleHelpMenu(event);
@@ -101,19 +108,23 @@ export class AboutComponent implements OnInit {
   }
 
   toggleHelpMenu(event): void {
-    if(event.target.id=="macu" && this.panelMacuEfect !=  'in'){
+    console.log(event);
+    if(event=="macu"){
       this.panelMacuEfect = this.panelMacuEfect === 'out' ? 'in' : 'out';
       this.panelPaulaEfect = 'out';
       this.panelEstudioEfect = 'out';
-    } if (event.target.id=="paula" && this.panelPaulaEfect !=  'in')  {
+    } if (event=="paula")  {
       this.panelPaulaEfect = this.panelPaulaEfect === 'out' ? 'in' : 'out';
       this.panelMacuEfect = 'out';
       this.panelEstudioEfect = 'out';
-    } else if (event.target.id=="estudio" && this.panelEstudioEfect !=  'in'){
+    } else if (event=="estudio"){
       this.panelEstudioEfect = this.panelEstudioEfect === 'out' ? 'in' : 'out';
       this.panelPaulaEfect = 'out';
       this.panelMacuEfect = 'out';
     }
+    this.estudioIconArrow = this.panelEstudioEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
+    this.macuIconArrow = this.panelMacuEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
+    this.paulaIconArrow = this.panelPaulaEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
   }
 
 }
