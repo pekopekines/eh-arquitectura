@@ -18,23 +18,25 @@ declare var $:any;
       state('out', style({
         position: 'relative',
         width: '0px',
-        height: '450px',
+        height: '100%',
         float:'left',
         display: 'none',
         backgroundColor: 'black',
         opacity: 0,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        fontSize: '1vw'
       })),
       state('in', style({
         position: 'relative',
         left:'0',
-        width: '330px',
-        height: '450px',
+        width: '70%',
+        height: '100%',
         float:'left',
         backgroundColor: 'transparent',
         display: 'inherit',
         opacity: 1,
-        overflow: 'auto'
+        overflow: 'auto',
+        fontSize: '1vw'
       })),
       transition('in => out', animate('500ms ease-in-out')),
       transition('out => in', animate('500ms ease-in-out'))

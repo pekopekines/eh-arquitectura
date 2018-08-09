@@ -161,7 +161,7 @@ li {
     align-items: center;
     /*margin-top: 5%;*/
     margin-left: 30%;
-    height: 100%;/*500px*/
+    height: 90%;/*500px*/
     width: 70%;
     background: #08273e69;
    /* border-radius: 5%;*/
@@ -171,12 +171,11 @@ li {
     float:center;
     margin-top: 5%;
     margin-left: 30%;*/
-    margin-left: 4%;
     text-align: left;
-    height: 50%;
-    width: 80%;
+    height: 60%;
+    width: 90%;
 
-    background: green;
+    background: transparent;
     border-radius: 2%;
 }
 
@@ -203,8 +202,6 @@ li {
 
 .opciones {
     display: block;
-    width: 50%;
-    height: 100%;
     position: relative;
     float:left;
     width: 50%;
@@ -212,7 +209,8 @@ li {
 }
 
 .contenidoOpciones {
-    float:left; overflow: hidden;
+    float:left; 
+    overflow: hidden;
     cursor: pointer;
     height: 100%;
 }
@@ -222,13 +220,18 @@ li {
     cursor: pointer;
     transform-origin: 15px 15px;
     height: 100%;
-    width: 10,8%;
+    width: 10%;
     background: #3b3a30b6;
-    padding: 4%;
+    padding: 10px;
     border: #3b3a3066;
     border-right-style: solid;
     border-top-style: solid;
     border-width: 2px;
+}
+
+.opcion:hover {
+    background: #4b4935b6;
+    padding: 11px;
 }
 
 .textoOpcion {
@@ -238,23 +241,26 @@ li {
     text-indent : 0px;
     writing-mode: vertical-lr;
     color: #fbefcc;
-    font-size: 120%;
+    font-size: 1vw;
     letter-spacing: 2px;
     padding: 2px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 2vw;
 }
 
 .botonOpcion {
-    width: 20px;
-    height: 20px;
+    width: 90%;
+    height: 4.6%;
     background: transparent;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
+}
 
+.fa {
+    font-size: 1.5vw;
 }
 
 .panelText {
@@ -267,35 +273,4 @@ li {
 
 .active, .texto:hover {
     background-color: #ccc; 
-}
-
-.panel {
-    /*transform: rotate(-90deg);
-    display: block;
-    */
-    position: relative;
-    width: 320px;
-    float:left;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-}
-
-.panelSeleccionado {
-    position: relative;
-    left:0;
-    width: 330px;
-    height: 450px;
-    border-radius: 5%;
-    float:left;
-    background-color: white;
-    overflow: hidden;
-    display: inherit;
-    overflow: auto;
-    transition: all 2s ease-in-out;
-}
-
-.d-inline-block {
-    width: 300px;
-    height: 300px;
 }

@@ -245,7 +245,7 @@ li {
     margin-top: 32%; */
     background: transparent;
     font-family: 'Indie Flower', cursive;
-    font-size: 20px;
+    font-size: 1.2vw;
     font-style: italic;
     color: black;
     text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255);
@@ -254,5 +254,13 @@ li {
 @media screen and (max-width: 800px){
     .slogan {
         width:80%;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .slogan {
+        width:80%;
+        font-size: 2vw;
     }
 }
