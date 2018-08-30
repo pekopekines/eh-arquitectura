@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ObjectGallery } from '../../models/ObjectGallery';
 
 @Component({
   selector: 'eh-proyect-detail',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyect-detail.component.css']
 })
 export class ProyectDetailComponent implements OnInit {
-
-  constructor() { }
+  objGallery:ObjectGallery;
+  id:string;
+  constructor(id:string) {
+    this.id = id;
+    console.log(id);
+    /*obj:ObjectGallery
+    this.objGallery= obj;*/
+   }
 
   ngOnInit() {
   }

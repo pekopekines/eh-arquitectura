@@ -1,0 +1,18 @@
+<div class= "xbody">
+    <div class="opciones">
+        <div class="for1" *ngFor="let obj of objectsAbout" (click)="cambiarOpcion(obj, $event) ">
+            <label [class]="obj.isSelected ? 'opcionSeleccionado' : 'opcion'">{{obj.name}} </label>
+        </div>
+    </div>
+    
+        <div class="fondo">
+            <div class="for2" *ngFor="let obj of objectsAbout">
+                <div [@slide]='opcionSeleccionada'>
+                <div class="contenidoOpcion">
+                    <img class="imgSeleccion" src={{obj.url}} >
+                    <p class="descripcionOpcion">{{obj.description}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>

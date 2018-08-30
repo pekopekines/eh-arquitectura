@@ -1,0 +1,107 @@
+.xbody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: black;
+    background-color: #000000f0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 1;
+    z-index: 0;
+    transition: all 2s ease ;
+    opacity: 1;
+}
+
+.fondo{
+    overflow: auto;
+    display: block;
+    margin-top:5%;
+    margin-left: 30%;
+    height: 80%;
+    width: 70%;
+    border-radius: 2%;
+}
+
+
+.opciones {
+    display: flex;
+    position: relative;
+    float:left;
+    text-align: center;
+    margin-left: 30%;
+    width: 70%;
+    height: 10%;
+    margin-top: 2%;
+    background: gray;
+}
+
+
+
+.contenedorImagenes{
+    display: -webkit-box;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+.imagenesGrandes{
+    position: relative;
+    display: block;
+    width: 60%;
+    cursor: pointer;
+}
+
+.imagenesChicas {
+    position: relative;
+    margin-left: 2%;
+    width: 30%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.imagen {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.imagenChica {
+    position: relative;
+    padding-bottom: 1%;
+    width: 95%;
+    text-align: center;
+}
+
+.tituloProyecto {
+    font-size: 1.3vw;
+    color: aliceblue;
+    cursor: pointer;
+    line-height: 2vw;
+    display : inherit;
+}
+
+.textoImagen {
+    cursor: pointer;
+    position: absolute;
+    top: 2.2vw;
+    left: 0%;
+    background: rgba(20, 20, 20, 0.767);
+    width: 100%;
+    line-height: 2vw;
+    font-size: 1.1vw;
+    color: white;
+    display : inherit;
+
+}
+
+img{
+    width: 100%;
+}
+
+img:hover{
+    filter: sepia(80%);
+    transition: all 1s ease ;
+}
+

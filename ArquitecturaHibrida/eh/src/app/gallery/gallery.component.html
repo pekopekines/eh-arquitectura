@@ -1,3 +1,35 @@
-<p>
-  gallery works!
-</p>
+<div class= "xbody">
+  <div class="opciones">
+  </div>
+  <div class="fondo" >
+    <div *ngFor="let obj of objectsGallery; let i = index">
+      <div class="contenedorImagenes" *ngIf="isGrande(i)">
+        <a href="/proyectdetail" class="imagenesGrandes" (mouseenter)="mostrarTextoImagen(obj)" (mouseleave)="mostrarTextoImagen(obj)">
+          <div [class]="(i+1)%3 == 1 ? 'imagenGrande' : 'imagenChica'" [style.display]="(i) >= objectsGallery.length  ? 'none' :  'block' ">
+            <label class="tituloProyecto">{{obj.name}}</label>
+                <img src={{obj.url}} >
+                <div class="textoImagen" [@slide]="obj.slideText === true ? 'showGrande' : 'hide'" >
+                  <p style="position:relative">texto</p>
+                </div>
+          </div>
+        </a>
+        <div class="imagenesChicas">
+          <a href="/proyectdetail" [class]="(i+2)%3 == 1 ? 'imagenGrande' : 'imagenChica'" (mouseenter)="mostrarTextoImagen(objectsGallery[i+1])" (mouseleave)="mostrarTextoImagen(objectsGallery[i+1])" [style.display]="(i+1) >= objectsGallery.length  ? 'none' :  'block' ">
+            <label class="tituloProyecto">{{objectsGallery[i+1].name}}</label>
+            <img src={{objectsGallery[i+1].url}} >
+            <div class="textoImagen" [@slide]="objectsGallery[i+1].slideText === true ? 'showChico' : 'hide'" >
+                <p style="position:relative">texto</p>
+            </div>
+          </a>
+          <a (click)="openDetail(objectsGallery[i+2])" [class]="(i+3)%3 == 1 ? 'imagenGrande' : 'imagenChica'" (mouseenter)="mostrarTextoImagen(objectsGallery[i+2])" (mouseleave)="mostrarTextoImagen(objectsGallery[i+2])" [style.display]="(i+1) >= objectsGallery.length  ? 'none' :  'block' ">
+            <label class="tituloProyecto">{{objectsGallery[i+2].name}}</label>
+            <img src={{objectsGallery[i+2].url}} >
+            <div class="textoImagen" [@slide]="objectsGallery[i+2].slideText === true ? 'showChico' : 'hide'" >
+                <p style="position:relative">texto</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+</div>

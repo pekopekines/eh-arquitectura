@@ -1,0 +1,128 @@
+
+.xbody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: black;
+    background-color: #000000f0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 1;
+    z-index: 0;
+    transition: all 2s ease ;
+    opacity: 1;
+}
+
+.fondo{
+    overflow: hidden;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top:5%;
+    margin-left: 30%;
+    height: 80%;
+    width: 70%;
+    border-radius: 2%;
+}
+
+
+.opciones {
+    display: flex;
+    position: relative;
+    float:left;
+    text-align: center;
+    margin-left: 30%;
+    width: 70%;
+    height: 10%;
+    margin-top: 2%;
+}
+
+.contenidoOpciones {
+    float:left; 
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+}
+
+.opcionSeleccionado {
+    float:left; overflow: visible;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 1.6vw;
+    color: rgba(243, 240, 34, 0.938);
+    text-decoration: underline  #fdeb25ef;
+    transition: all 2s ease ;
+}
+
+.opcion {
+    float:left; overflow: visible;
+    cursor: pointer;
+    color: white;
+    font-style: italic;
+    font-size: 1vw;
+    transition: all 1s ease ;
+}
+
+.opcion:hover {
+    font-size: 1.3vw;
+    text-decoration: underline  #fdeb25ef;
+}
+
+.active, .texto:hover {
+    background-color: #ccc; 
+}
+
+.contenedorSeleccionado {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    float:left;
+}
+
+.contenedorVacio {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    float:left;
+}
+
+.vertical-slide{
+    width: 100%;
+    height: 50%;
+    background: blue;
+}
+
+.vertical-slide:hover{
+    transform: translateY(-70%);
+}
+
+.imgSeleccion {
+    cursor: pointer;
+    height: 25%;
+    width: 25%;
+    border-radius: 10%;
+    margin: 2%;
+
+}
+
+.for1 {
+    margin-right: 7%;
+}
+
+.for2 {
+    height: 100%;
+}
+
+.contenidoOpcion {
+    display: inline-flex;
+}
+
+.descripcionOpcion {
+    overflow: auto;
+    padding: 20px;
+    font-size: 2vw;
+    color: rgb(226, 238, 66);
+}

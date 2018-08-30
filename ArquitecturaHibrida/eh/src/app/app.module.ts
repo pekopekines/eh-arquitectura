@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { About2Component } from './about2/about2.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     PrincipalComponent,
     FooterComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    About2Component
   ],
   imports: [
     routes,

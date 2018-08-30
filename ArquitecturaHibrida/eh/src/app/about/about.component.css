@@ -152,30 +152,22 @@ li {
     background-repeat: none;
     opacity: 1;
     z-index: 0;
-    
+    transition: all 2s ease ;
+    opacity: 1;
 }
 
 .fondo{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-top: 5%;*/
     margin-left: 30%;
-    height: 90%;/*500px*/
+    height: 90%;
     width: 70%;
-    background: #08273e69;
-   /* border-radius: 5%;*/
 }
 .perfil2 {
-   /* position: relative;
-    float:center;
-    margin-top: 5%;
-    margin-left: 30%;*/
     text-align: left;
-    height: 60%;
-    width: 90%;
-
-    background: transparent;
+    height: 70%;
+    width: 98%;
     border-radius: 2%;
 }
 
@@ -197,7 +189,7 @@ li {
 }
 
 .imagenHover{
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .opciones {
@@ -215,13 +207,25 @@ li {
     height: 100%;
 }
 
+.opcionSeleccionado {
+    float:left; overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    width: 12%;
+    background:  #e2d114d0;
+    padding: 10px;
+    border: #3b3a30bd;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-width: 2px;
+}
+
 .opcion {
     float:left; overflow: hidden;
     cursor: pointer;
-    transform-origin: 15px 15px;
     height: 100%;
-    width: 10%;
-    background: #3b3a30b6;
+    width: 100%;
+    background:  #d8ca35c9;
     padding: 10px;
     border: #3b3a3066;
     border-right-style: solid;
@@ -230,9 +234,16 @@ li {
 }
 
 .opcion:hover {
-    background: #4b4935b6;
+    background: #918827c9;
     padding: 11px;
 }
+
+.opcionSeleccionado:hover {
+    background: #918827c9;
+    padding: 11px;
+}
+
+
 
 .textoOpcion {
     overflow: visible;
@@ -240,12 +251,13 @@ li {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
     text-indent : 0px;
     writing-mode: vertical-lr;
-    color: #fbefcc;
+    color: #252524f6;
     font-size: 1vw;
     letter-spacing: 2px;
     padding: 2px;
     cursor: pointer;
     margin-top: 2vw;
+    transform: rotateZ(180deg);
 }
 
 .botonOpcion {
@@ -266,11 +278,25 @@ li {
 .panelText {
     width: 100%;
     height: 100%;
-    background: #ffefad8f;
+    background: #92918ada;
     padding: 5%;
     cursor: default;
 }
 
 .active, .texto:hover {
     background-color: #ccc; 
+}
+
+.contenedorSeleccionado {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    float:left;
+}
+
+.contenedorVacio {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    float:left;
 }

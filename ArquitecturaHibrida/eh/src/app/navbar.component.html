@@ -1,7 +1,7 @@
 <nav class="navbar-fixed-left" >
   <div>
     
-      <div class= "menu"  [routerLink]="['/']">
+      <div class= "menu"  [routerLink]="['/']" (click)="selectLink('eh')">
           <svg class="logo" width="120" height="120" viewBox="-30 -30 370 370" style="width:100%;height:100%;" >
               <path d="M 135 250 l -115 0 l 0 -210 l 115 0 m -115 105 l 100 0 m 45 -105 l 0 215 m 0 -105 l 125 0 m 0 -110 l 0 215 m 0 15 l 0 15 l -300 0 l 0 -280 l 330 0 l 0 170 m -10 100 z" stroke="black" 
               stroke-width= "16"  fill="none" stroke-dasharray="1100" stroke-dashoffset="20;0 " stroke-linejoin="round">
@@ -102,9 +102,10 @@
       
           </div>
     <ul class="navbar-left">
-      <li routerLinkActive="active"><a [routerLink]="['/about']">Nosotras!</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['/gallery']">Proyectos!</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['/contact']">Contacto!</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/about']" [class]='aboutCss' (click)="selectLink('about')">Nosotras</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/about2']" [class]='aboutCss' (click)="selectLink('about2')">Nosotras</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/gallery']" [class]='galleryCss' (click)="selectLink('gallery')">Proyectos</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/contact']" [class]='contactCss' (click)="selectLink('contact')">Contacto</a></li>
     </ul>
  
   </div>

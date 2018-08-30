@@ -6,8 +6,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
-declare var jquery:any;
-declare var $:any;
+import { ObjectAbout } from '../models/objectAbout';
 
 @Component({
   selector: 'eh-about',
@@ -29,7 +28,7 @@ declare var $:any;
       state('in', style({
         position: 'relative',
         left:'0',
-        width: '70%',
+        width: '88%',
         height: '100%',
         float:'left',
         backgroundColor: 'transparent',
@@ -38,8 +37,24 @@ declare var $:any;
         overflow: 'auto',
         fontSize: '1vw'
       })),
-      transition('in => out', animate('500ms ease-in-out')),
+      transition('in => out', animate('0ms ease')),
       transition('out => in', animate('500ms ease-in-out'))
+    ]),
+    trigger('opcionSize', [
+      state('out', style({
+        position: 'relative',
+        width: '10%',
+        height: '100%',
+        float:'left'
+      })),
+      state('in', style({
+        position: 'relative',
+        width: '80%',
+        height: '100%',
+        float:'left'
+      })),
+      transition('in => out', animate('0ms ease-in-out')),
+      transition('out => in', animate('0ms ease-in-out'))
     ])
   ]
 })
@@ -61,9 +76,9 @@ export class AboutComponent implements OnInit {
   estudioIconArrow: String;
   macuIconArrow: String;
   paulaIconArrow: String;
+  objectsAbout: Array<ObjectAbout>;
+  
   ngOnInit() {
-    this.urls = ["../../assets/images/Macu.jpg", "../../assets/images/Paula.jpg"];
-    this.descripciones = ["Somos un estudio enfocado...", "Soy Macu", "Soy Paula"];
     this.urlImagen ="../../assets/images/casa1.jpg";
     this.panelMacuEfect = 'out';
     this.panelPaulaEfect = 'out';
@@ -71,6 +86,12 @@ export class AboutComponent implements OnInit {
     this.estudioIconArrow = 'fa fa-angle-left';
     this.macuIconArrow = 'fa fa-angle-right';
     this.paulaIconArrow = 'fa fa-angle-right';
+    this.objectsAbout = 
+    [
+      new ObjectAbout ('1', 'Nuestra historia', 'Soy un estudio', null, '../../assets/images/casa1.jpg', 'in', 'fa fa-angle-left', 'opcionSeleccionado', 'contenedorSeleccionado', true),
+      new ObjectAbout ('2', 'Arq. Maria Macarena Gimenez', 'Soy una Macu', null, '../../assets/images/Macu.jpg', 'out', 'fa fa-angle-right', 'opcion', 'contenedorVacio', true),
+      new ObjectAbout ('3', 'Arq. Marta Paula Raquel Gatica', 'Soy una Paula', null, '../../assets/images/Paula.jpg', 'out', 'fa fa-angle-right', 'opcion', 'contenedorVacio', true)];
+
   }
 
   selectWorker(event) {
@@ -90,12 +111,11 @@ export class AboutComponent implements OnInit {
     }
   }
   selectOpction(event) {
-    if(event=="macu"){
-      this.urlImagen = "../../assets/images/Macu.jpg";
-    } if (event=="paula")  {
-      this.urlImagen = "../../assets/images/Paula.jpg";
-    } else if (event=="estudio"){
-      this.urlImagen = "../../assets/images/casa1.jpg";
+    for (let index = 0; index < this.objectsAbout.length; index++) {
+      const element = this.objectsAbout[index];
+      if(event==element.id){
+        this.urlImagen = element.url;
+      }
     }
     this.toggleHelpMenu(event);
     this.imagenCss = "imagen";
@@ -111,22 +131,18 @@ export class AboutComponent implements OnInit {
 
   toggleHelpMenu(event): void {
     console.log(event);
-    if(event=="macu"){
-      this.panelMacuEfect = this.panelMacuEfect === 'out' ? 'in' : 'out';
-      this.panelPaulaEfect = 'out';
-      this.panelEstudioEfect = 'out';
-    } if (event=="paula")  {
-      this.panelPaulaEfect = this.panelPaulaEfect === 'out' ? 'in' : 'out';
-      this.panelMacuEfect = 'out';
-      this.panelEstudioEfect = 'out';
-    } else if (event=="estudio"){
-      this.panelEstudioEfect = this.panelEstudioEfect === 'out' ? 'in' : 'out';
-      this.panelPaulaEfect = 'out';
-      this.panelMacuEfect = 'out';
+    for (let index = 0; index < this.objectsAbout.length; index++) {
+      const element = this.objectsAbout[index];
+      if(event==element.id){
+        this.urlImagen = element.url;
+        element.effect = element.effect === 'out' ? 'in' : 'out';
+      } else {
+        element.effect = 'out';
+      }
+      element.iconArrow = element.effect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
+      element.classCssOpcion = element.effect === 'out' ? 'opcion' : 'opcionSeleccionado';
+      element.classCssContenedor = element.effect === 'out' ? 'contenedorVacio' : 'contenedorSeleccionado';
     }
-    this.estudioIconArrow = this.panelEstudioEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
-    this.macuIconArrow = this.panelMacuEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
-    this.paulaIconArrow = this.panelPaulaEfect === 'out' ? 'fa fa-angle-right' : 'fa fa-angle-left';
   }
 
 }
